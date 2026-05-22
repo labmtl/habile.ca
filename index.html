@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HABILE | Hub d'accompagnement des bâtisseurs d'initiatives locales et engagées</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        secondary: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* CSS-based language switching */
+        html[lang="fr"] .lang-en { display: none !important; }
+        html[lang="en"] .lang-fr { display: none !important; }
+        
+        .transition-all {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-secondary-50 text-secondary-800 font-sans antialiased">
+
+    <!-- Header / Navigation -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-secondary-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-700 to-primary-600 flex items-center justify-center text-white font-extrabold text-xl shadow-md">
+                        H
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-tight text-primary-800">HABILE</span>
+                        <p class="text-[9px] uppercase tracking-widest text-secondary-900 font-semibold -mt-1 block">
+                            <span class="lang-fr">Habitat Intelligent</span>
+                            <span class="lang-en">Smart Housing</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                    <a href="#problem" class="text-secondary-800 hover:text-primary-700 transition-all">
+                        <span class="lang-fr">Le Défi</span><span class="lang-en">The Challenge</span>
+                    </a>
+                    <a href="#vision" class="text-secondary-800 hover:text-primary-700 transition-all">
+                        <span class="lang-fr">Théorie du Changement</span><span class="lang-en">Change Theory</span>
+                    </a>
+                    <a href="#simulator" class="text-secondary-800 hover:text-primary-700 transition-all">
+                        <span class="lang-fr">Simulateur</span><span class="lang-en">Simulator</span>
+                    </a>
+                    <a href="#clients" class="text-secondary-800 hover:text-primary-700 transition-all">
+                        <span class="lang-fr">Pour qui ?</span><span class="lang-en">Who we serve</span>
+                    </a>
+                    <a href="#team" class="text-secondary-800 hover:text-primary-700 transition-all">
+                        <span class="lang-fr">Équipe</span><span class="lang-en">Our Team</span>
+                    </a>
+                </nav>
+
+                <!-- Language Selector & CTA -->
+                <div class="flex items-center gap-4">
+                    <!-- Language Toggle Button -->
+                    <button onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-secondary-100 bg-secondary-50 hover:bg-secondary-100 text-xs font-bold transition-all" aria-label="Toggle language">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-secondary-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                        <span class="lang-fr">EN</span><span class="lang-en">FR</span>
+                    </button>
+                    
+                    <a href="https://cohabitat.cc" target="_blank" class="hidden sm:inline-flex items-center justify-center px-4 py-2 rounded-xl text-xs font-bold text-white bg-primary-700 hover:bg-primary-800 shadow-sm transition-all">
+                        <span class="lang-fr">Laboratoire Vivant</span><span class="lang-en">Living Lab</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-gradient-to-b from-primary-50/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                
+                <!-- Hero Left Info -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-100 border border-primary-600/10 text-xs font-semibold text-primary-800">
+                        <span class="lang-fr">🏆 Participant au Coopérathon 2026</span>
+                        <span class="lang-en">🏆 Cooperathon 2026 Participant</span>
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-secondary-900 leading-tight tracking-tight">
+                        <span class="lang-fr">Reprenez le contrôle de votre <span class="text-primary-700">milieu de vie</span></span>
+                        <span class="lang-en">Take control of your <span class="text-primary-700">living environment</span></span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-secondary-800 max-w-2xl mx-auto lg:mx-0">
+                        <span class="lang-fr">HABILE.ca est une plateforme technologique citoyenne dédiée à la co-conception, la simulation financière et la gestion d'habitats collaboratifs. Nous brisons le cycle de l'habitation coûteuse.</span>
+                        <span class="lang-en">HABILE.ca is a citizen-driven platform dedicated to co-design, financial simulation, and management of collaborative housing. We break the cycle of expensive, isolated housing.</span>
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                        <a href="#simulator" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-white bg-primary-700 hover:bg-primary-800 shadow-md hover:shadow-lg transition-all text-sm">
+                            <span class="lang-fr">Essayer le simulateur</span><span class="lang-en">Try the Simulator</span>
+                        </a>
+                        <a href="#vision" class="inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-secondary-800 bg-white border border-secondary-100 hover:bg-secondary-100 shadow-sm transition-all text-sm">
+                            <span class="lang-fr">Théorie du changement</span><span class="lang-en">Theory of Change</span>
+                        </a>
+                    </div>
+
+                    <!-- SDG Badges -->
+                    <div class="pt-6 border-t border-secondary-100">
+                        <p class="text-xs font-bold text-secondary-900 tracking-wider uppercase mb-3">
+                            <span class="lang-fr">Alignement aux Objectifs de Développement Durable (ODD)</span>
+                            <span class="lang-en">Aligned with UN Sustainable Development Goals (SDG)</span>
+                        </p>
+                        <div class="flex flex-wrap gap-2.5 justify-center lg:justify-start">
+                            <span class="inline-flex items-center px-2.5 py-1 rounded bg-amber-500/10 text-amber-800 text-xs font-bold border border-amber-500/20">ODD 11: Villes durables</span>
+                            <span class="inline-flex items-center px-2.5 py-1 rounded bg-emerald-500/10 text-emerald-800 text-xs font-bold border border-emerald-500/20">ODD 12: Consommation responsable</span>
+                            <span class="inline-flex items-center px-2.5 py-1 rounded bg-blue-500/10 text-blue-800 text-xs font-bold border border-blue-500/20">ODD 17: Partenariats</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Right Interactive Mockup Container -->
+                <div class="lg:col-span-5 relative">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-primary-100 to-emerald-100 rounded-3xl blur-2xl opacity-40 -z-10"></div>
+                    <div class="bg-white border border-secondary-100 rounded-3xl p-6 shadow-xl space-y-6">
+                        <div class="flex justify-between items-center pb-4 border-b border-secondary-100">
+                            <div class="flex items-center gap-2">
+                                <span class="w-3 h-3 rounded-full bg-red-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+                                <span class="w-3 h-3 rounded-full bg-green-400"></span>
+                            </div>
+                            <span class="text-xs font-mono text-secondary-800 bg-secondary-100 px-2 py-0.5 rounded">prototype-v0.1.sh</span>
+                        </div>
+
+                        <!-- Mini UI Preview -->
+                        <div class="space-y-4">
+                            <div class="bg-secondary-50 p-4 rounded-2xl border border-secondary-100">
+                                <span class="text-[10px] uppercase font-bold text-primary-700 tracking-wider">
+                                    <span class="lang-fr">Communautés Actives</span><span class="lang-en">Active Communities</span>
+                                </span>
+                                <h3 class="text-lg font-bold text-secondary-900 mt-1">Collectif Cycliste Montréal</h3>
+                                <p class="text-xs text-secondary-800 mt-1">
+                                    <span class="lang-fr">60+ personnes à la recherche d'un espace pour une habitation haute-densité sans voiture.</span>
+                                    <span class="lang-en">60+ people looking for a space to build high-density, car-free cooperative housing.</span>
+                                </p>
+                            </div>
+
+                            <!-- Live Progress Bar -->
+                            <div class="space-y-1">
+                                <div class="flex justify-between text-xs font-semibold">
+                                    <span class="text-secondary-800">
+                                        <span class="lang-fr">Validation de pré-développement</span><span class="lang-en">Pre-development validation</span>
+                                    </span>
+                                    <span class="text-primary-700 font-bold">85%</span>
+                                </div>
+                                <div class="w-full bg-secondary-100 rounded-full h-2">
+                                    <div class="bg-primary-700 h-2 rounded-full" style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-3 text-center">
+                                <div class="p-3 bg-secondary-50 rounded-xl border border-secondary-100">
+                                    <span class="text-[10px] text-secondary-900 uppercase font-bold block">
+                                        <span class="lang-fr">Frais de départ</span><span class="lang-en">Upfront Fees</span>
+                                    </span>
+                                    <span class="text-lg font-black text-red-600">- 70%</span>
+                                </div>
+                                <div class="p-3 bg-primary-50 rounded-xl border border-primary-100">
+                                    <span class="text-[10px] text-primary-800 uppercase font-bold block">
+                                        <span class="lang-fr">Délai économisé</span><span class="lang-en">Time Saved</span>
+                                    </span>
+                                    <span class="text-lg font-black text-primary-700">14 Mois</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- The Problem / Solution -->
+    <section id="problem" class="py-20 bg-white border-y border-secondary-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <h2 class="text-3xl font-black text-secondary-900 tracking-tight">
+                    <span class="lang-fr">La problématique racine de l'habitation</span>
+                    <span class="lang-en">The Housing Root Problem</span>
+                </h2>
+                <p class="text-base text-secondary-800">
+                    <span class="lang-fr">Le développement immobilier traditionnel est une boîte noire opaque réservée aux initiés.</span>
+                    <span class="lang-en">Traditional real estate development is an opaque black box reserved for industry insiders.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+                <!-- Traditional card -->
+                <div class="p-8 rounded-2xl border border-red-100 bg-red-50/20 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-red-100 flex items-center justify-center text-red-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary-900">
+                        <span class="lang-fr">Le modèle opaque traditionnel</span>
+                        <span class="lang-en">Traditional Opaque Model</span>
+                    </h3>
+                    <ul class="space-y-3 text-sm text-secondary-800">
+                        <li class="flex gap-2 items-start">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span class="lang-fr">Délais d'accompagnement majeurs menant à la démobilisation des collectifs.</span>
+                            <span class="lang-en">Major support delays leading to the demobilization of citizen groups.</span>
+                        </li>
+                        <li class="flex gap-2 items-start">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span class="lang-fr">Frais fixes non récupérables très élevés en pré-développement.</span>
+                            <span class="lang-en">Very high non-recoverable fixed costs in the pre-development phase.</span>
+                        </li>
+                        <li class="flex gap-2 items-start">
+                            <span class="text-red-500 font-bold">•</span>
+                            <span class="lang-fr">Spéculation immobilière déconnectée des désirs de vie communautaire.</span>
+                            <span class="lang-en">Speculative housing projects disconnected from actual community needs.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Habile card -->
+                <div class="p-8 rounded-2xl border border-primary-100 bg-primary-50/20 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-primary-100 flex items-center justify-center text-primary-700">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-secondary-900">
+                        <span class="lang-fr">La solution HABILE</span>
+                        <span class="lang-en">The HABILE Solution</span>
+                    </h3>
+                    <ul class="space-y-3 text-sm text-secondary-800">
+                        <li class="flex gap-2 items-start">
+                            <span class="text-primary-700 font-bold">•</span>
+                            <span class="lang-fr">Infrastructure numérique de co-conception & simulation financière rapide.</span>
+                            <span class="lang-en">Digital workspace for co-design & fast, collaborative financial simulation.</span>
+                        </li>
+                        <li class="flex gap-2 items-start">
+                            <span class="text-primary-700 font-bold">•</span>
+                            <span class="lang-fr">Réduction des risques de pré-développement avant d'engager des frais majeurs.</span>
+                            <span class="lang-en">De-risking of projects before committing major upfront fees to professionals.</span>
+                        </li>
+                        <li class="flex gap-2 items-start">
+                            <span class="text-primary-700 font-bold">•</span>
+                            <span class="lang-fr">Plans et cadres juridiques partagés librement (Creative Commons).</span>
+                            <span class="lang-en">Open Source blueprints & legal frameworks (Creative Commons).</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theory of Change -->
+    <section id="vision" class="py-20 bg-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs font-bold text-primary-700 tracking-widest uppercase">
+                    <span class="lang-fr">Mécanique d'impact</span><span class="lang-en">Impact Engine</span>
+                </span>
+                <h2 class="text-3xl font-black text-secondary-900 tracking-tight">
+                    <span class="lang-fr">Notre théorie du changement</span>
+                    <span class="lang-en">Our Theory of Change</span>
+                </h2>
+                <p class="text-base text-secondary-800">
+                    <span class="lang-fr">Comment nous transformons des barrières d'accès en autonomie citoyenne.</span>
+                    <span class="lang-en">How we transform systemic real estate barriers into community autonomy.</span>
+                </p>
+            </div>
+
+            <!-- Theory of Change Pipeline -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6 mt-12 relative">
+                <!-- Box 1 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl shadow-sm relative space-y-3">
+                    <span class="absolute top-4 right-4 text-xs font-mono font-bold text-secondary-900 bg-secondary-100 px-2 py-0.5 rounded">01</span>
+                    <h4 class="font-bold text-secondary-950 text-base">
+                        <span class="lang-fr">La Problématique</span><span class="lang-en">The Inputs</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Des citoyens bloqués par des barrières techniques, financières et d'accès aux terrains.</span>
+                        <span class="lang-en">Citizens blocked by technical, planning, and upfront financial barriers.</span>
+                    </p>
+                </div>
+
+                <!-- Box 2 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl shadow-sm relative space-y-3">
+                    <span class="absolute top-4 right-4 text-xs font-mono font-bold text-secondary-900 bg-secondary-100 px-2 py-0.5 rounded">02</span>
+                    <h4 class="font-bold text-secondary-950 text-base">
+                        <span class="lang-fr">Interventions</span><span class="lang-en">Interventions</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Outils de simulation, d'auto-organisation open-source, et expertise de conformité.</span>
+                        <span class="lang-en">Simulation engines, open-source governance tools, and compliance frameworks.</span>
+                    </p>
+                </div>
+
+                <!-- Box 3 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl shadow-sm relative space-y-3">
+                    <span class="absolute top-4 right-4 text-xs font-mono font-bold text-secondary-900 bg-secondary-100 px-2 py-0.5 rounded">03</span>
+                    <h4 class="font-bold text-secondary-950 text-base">
+                        <span class="lang-fr">Outputs</span><span class="lang-en">Outputs</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Réduction radicale des coûts et délais de pré-développement. Validation précoce.</span>
+                        <span class="lang-en">Drastic reduction in pre-development expenses. Early-stage viability checks.</span>
+                    </p>
+                </div>
+
+                <!-- Box 4 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl shadow-sm relative space-y-3">
+                    <span class="absolute top-4 right-4 text-xs font-mono font-bold text-secondary-900 bg-secondary-100 px-2 py-0.5 rounded">04</span>
+                    <h4 class="font-bold text-secondary-950 text-base">
+                        <span class="lang-fr">Outcomes</span><span class="lang-en">Outcomes</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Abordabilité réelle, autonomie citoyenne et preuve de faisabilité haute-densité.</span>
+                        <span class="lang-en">True housing affordability, citizen autonomy, and policy advocacy.</span>
+                    </p>
+                </div>
+
+                <!-- Box 5 -->
+                <div class="bg-primary-900 text-white p-6 rounded-2xl shadow-md relative space-y-3 border border-primary-800">
+                    <span class="absolute top-4 right-4 text-xs font-mono font-bold text-primary-200 bg-primary-800 px-2 py-0.5 rounded">05</span>
+                    <h4 class="font-bold text-white text-base">
+                        <span class="lang-fr">L'Impact</span><span class="lang-en">The Vision</span>
+                    </h4>
+                    <p class="text-xs text-primary-100 leading-relaxed">
+                        <span class="lang-fr">Une ville de communautés intentionnelles, résilientes, décarbonées et hors-spéculation.</span>
+                        <span class="lang-en">A resilient city of intentional, decarbonized, non-speculative communities.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Simulator Widget -->
+    <section id="simulator" class="py-20 bg-white border-y border-secondary-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <span class="text-xs font-bold text-primary-700 tracking-widest uppercase">
+                    <span class="lang-fr">Outil Interactif</span><span class="lang-en">Interactive Tool</span>
+                </span>
+                <h2 class="text-3xl font-black text-secondary-900 tracking-tight">
+                    <span class="lang-fr">Simulateur d'économies de pré-développement</span>
+                    <span class="lang-en">Pre-development Savings Simulator</span>
+                </h2>
+                <p class="text-sm text-secondary-800">
+                    <span class="lang-fr">Glissez les curseurs pour voir comment HABILE réduit la prise de risque financière de votre collectif.</span>
+                    <span class="lang-en">Adjust the parameters to see how HABILE reduces financial risk for your housing project.</span>
+                </p>
+            </div>
+
+            <!-- Simulation Box -->
+            <div class="bg-secondary-50 border border-secondary-100 rounded-3xl p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 shadow-sm">
+                <!-- Controls -->
+                <div class="md:col-span-7 space-y-6">
+                    <div>
+                        <label class="block text-sm font-bold text-secondary-900 mb-2">
+                            <span class="lang-fr">Nombre de logements visés :</span>
+                            <span class="lang-en">Target number of units:</span>
+                            <span id="units-val" class="text-primary-700 font-extrabold ml-1">20</span>
+                        </label>
+                        <input type="range" id="input-units" min="5" max="100" value="20" oninput="calculateSavings()" class="w-full h-2 bg-secondary-100 rounded-lg appearance-none cursor-pointer accent-primary-700">
+                        <div class="flex justify-between text-xs text-secondary-800 mt-1">
+                            <span>5</span>
+                            <span>100</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-secondary-900 mb-2">
+                            <span class="lang-fr">Type de structure porteuse :</span>
+                            <span class="lang-en">Project Organizer Type:</span>
+                        </label>
+                        <select id="input-type" onchange="calculateSavings()" class="w-full bg-white border border-secondary-100 rounded-xl px-4 py-3 text-sm font-medium text-secondary-800 focus:outline-none focus:ring-2 focus:ring-primary-700">
+                            <option value="collective" selected>Collectif Citoyen / Cohabitat (Citizen-driven)</option>
+                            <option value="coop">Coopérative d'habitation / OBNL</option>
+                            <option value="developer">Promoteur à impact social</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-bold text-secondary-900 mb-2">
+                            <span class="lang-fr">Coût estimé du terrain (en M$) :</span>
+                            <span class="lang-en">Estimated land value (in $M):</span>
+                            <span id="land-val" class="text-primary-700 font-extrabold ml-1">1.5M$</span>
+                        </label>
+                        <input type="range" id="input-land" min="0.5" max="10" step="0.5" value="1.5" oninput="calculateSavings()" class="w-full h-2 bg-secondary-100 rounded-lg appearance-none cursor-pointer accent-primary-700">
+                        <div class="flex justify-between text-xs text-secondary-800 mt-1">
+                            <span>0.5 M$</span>
+                            <span>10 M$</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Results -->
+                <div class="md:col-span-5 bg-white rounded-2xl border border-secondary-100 p-6 flex flex-col justify-between shadow-sm">
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold text-primary-700 uppercase tracking-widest block">
+                            <span class="lang-fr">Économies Estimées</span><span class="lang-en">Estimated Savings</span>
+                        </span>
+                        
+                        <!-- Saved Capital -->
+                        <div>
+                            <span class="text-xs text-secondary-800 block">
+                                <span class="lang-fr">Frais de pré-développement à risque économisés</span>
+                                <span class="lang-en">At-risk pre-development expenses saved</span>
+                            </span>
+                            <div class="text-3xl font-black text-primary-700 mt-1">
+                                <span id="saved-capital">$45,000</span>
+                            </div>
+                        </div>
+
+                        <!-- Time Saved -->
+                        <div>
+                            <span class="text-xs text-secondary-800 block">
+                                <span class="lang-fr">Temps économisé en phase de validation</span>
+                                <span class="lang-en">Time saved in validation phase</span>
+                            </span>
+                            <div class="text-xl font-bold text-secondary-900 mt-1">
+                                <span id="saved-time">10 mois / months</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-secondary-100 text-[11px] text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">*Les estimations reposent sur la réduction des démarches d'analyses de site, d'arpentage préliminaire et d'architecture simulée en amont par notre plateforme avant d'engager des professionnels officiels.</span>
+                        <span class="lang-en">*Estimations are based on direct reduction of preliminary site analysis, initial layout simulation, and crowd-sourced governance templates before locking down major professional retainers.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Types -->
+    <section id="clients" class="py-20 bg-secondary-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="text-xs font-bold text-primary-700 tracking-widest uppercase">
+                    <span class="lang-fr">Bénéficiaires</span><span class="lang-en">Who benefits</span>
+                </span>
+                <h2 class="text-3xl font-black text-secondary-900 tracking-tight">
+                    <span class="lang-fr">Pour qui cet outil est-il essentiel ?</span>
+                    <span class="lang-en">Tailored for Local Bâtisseurs</span>
+                </h2>
+                <p class="text-base text-secondary-800">
+                    <span class="lang-fr">Notre boîte à outils s'adapte à la complexité de chaque type de montage immobilier communautaire.</span>
+                    <span class="lang-en">Our toolsets adapt to the unique structure of each housing model.</span>
+                </p>
+            </div>
+
+            <!-- Client Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <!-- Card 1 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-emerald-100 text-emerald-800">
+                        Collectifs citoyens
+                    </span>
+                    <h4 class="font-bold text-secondary-950 text-lg">
+                        <span class="lang-fr">Groupes d'autoconstruction</span><span class="lang-en">Cohousing Groups</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Citoyens s'auto-organisant pour un milieu de vie alternatif. Valide la viabilité financière sans frais d'architecture prohibitifs dès le départ.</span>
+                        <span class="lang-en">Saves immense initial architect & consultant fees to determine feasibility, moving quickly from vision to bankable plan.</span>
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-blue-100 text-blue-800">
+                        Coopératives & OBNL
+                    </span>
+                    <h4 class="font-bold text-secondary-950 text-lg">
+                        <span class="lang-fr">Organismes communautaires</span><span class="lang-en">Coops & Non-profits</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Pour maximiser l'abordabilité et l'impact social. Aide à gérer la vie associative complexe et la conformité aux conventions de financement.</span>
+                        <span class="lang-en">Supports community life management, co-design, and structuring dynamic funding agreements smoothly.</span>
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-indigo-100 text-indigo-800">
+                        Promoteurs d'impact
+                    </span>
+                    <h4 class="font-bold text-secondary-950 text-lg">
+                        <span class="lang-fr">Économie sociale</span><span class="lang-en">Social Impact Developers</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Utile, Village urbain, Angus... Accélère la modélisation et prouve la viabilité des projets auprès des institutions de crédit.</span>
+                        <span class="lang-en">Speeds up feasibility models to convince traditional lenders & regulators that sustainable housing is stable.</span>
+                    </p>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white border border-secondary-100 p-6 rounded-2xl space-y-3 shadow-sm">
+                    <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-semibold bg-amber-100 text-amber-800">
+                        Municipalités
+                    </span>
+                    <h4 class="font-bold text-secondary-950 text-lg">
+                        <span class="lang-fr">OMH & Villes</span><span class="lang-en">Municipalities</span>
+                    </h4>
+                    <p class="text-xs text-secondary-800 leading-relaxed">
+                        <span class="lang-fr">Gestion intelligente des HLM, prévision du maintien d'actifs d'habitation, logistique des assemblées et de la participation citoyenne locale.</span>
+                        <span class="lang-en">Helps forecast asset maintenance alongside robust, user-friendly tooling for tenant democracy & involvement.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <span class="text-xs font-bold text-primary-700 tracking-widest uppercase">
+                    <span class="lang-fr">L'Équipe</span><span class="lang-en">The Builders</span>
+                </span>
+                <h2 class="text-3xl font-black text-secondary-900 tracking-tight">
+                    <span class="lang-fr">Qui se cache derrière HABILE ?</span>
+                    <span class="lang-en">The Minds Behind the Vision</span>
+                </h2>
+                <p class="text-sm text-secondary-800">
+                    <span class="lang-fr">Deux experts alliant ingénierie civique et économie d'impact basés à Montréal et Sherbrooke.</span>
+                    <span class="lang-en">A powerful combination of software automation and collective real estate expertise.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                    <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-primary-800 to-emerald-600 flex items-center justify-center text-white font-extrabold text-2xl shadow-md shrink-0">
+                        RN
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-secondary-950">Ricky Ng-Adam</h3>
+                        <p class="text-xs font-bold text-primary-700 uppercase tracking-widest">
+                            <span class="lang-fr">Génie des systèmes & technologies civiques</span>
+                            <span class="lang-en">Civic Tech & System Architect</span>
+                        </p>
+                        <p class="text-sm text-secondary-800 leading-relaxed">
+                            <span class="lang-fr">Expert en automatisation, gestion de plateformes collaboratives complexes et initiateur du lab citoyen labmtl.ca.</span>
+                            <span class="lang-en">Specializes in system performance, automation, and complex civic technologies to scale community impact.</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="flex flex-col sm:flex-row gap-6 items-center sm:items-start text-center sm:text-left">
+                    <div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-primary-700 to-amber-600 flex items-center justify-center text-white font-extrabold text-2xl shadow-md shrink-0">
+                        MS
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-xl font-bold text-secondary-950">Martin St-Denis</h3>
+                        <p class="text-xs font-bold text-primary-700 uppercase tracking-widest">
+                            <span class="lang-fr">Économiste social & Immobilier collectif</span>
+                            <span class="lang-en">Social Housing Economist</span>
+                        </p>
+                        <p class="text-sm text-secondary-800 leading-relaxed">
+                            <span class="lang-fr">Plus de 12 ans d'expérience en études d'impact, de marché, et accompagnement stratégique auprès des promoteurs d'impact social au Québec.</span>
+                            <span class="lang-en">12+ years directing market analysis, viability assessments, and technical strategy for Quebec non-profits and housing coops.</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Mock Form -->
+    <section id="contact" class="py-20 bg-secondary-50 border-t border-secondary-100">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white border border-secondary-100 rounded-3xl p-8 shadow-sm space-y-6">
+                <div class="text-center space-y-2">
+                    <h3 class="text-2xl font-black text-secondary-900 tracking-tight">
+                        <span class="lang-fr">Tenez-vous au courant du lancement !</span>
+                        <span class="lang-en">Stay updated on our launch</span>
+                    </h3>
+                    <p class="text-xs text-secondary-800">
+                        <span class="lang-fr">Inscrivez-vous pour participer à notre bêta ouverte d'habitation intelligente.</span>
+                        <span class="lang-en">Sign up for our open beta of democratic housing solutions.</span>
+                    </p>
+                </div>
+
+                <form id="waitlist-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-secondary-900 uppercase tracking-wider mb-1">
+                            <span class="lang-fr">Nom d'organisation ou de collectif</span>
+                            <span class="lang-en">Organization or Group Name</span>
+                        </label>
+                        <input type="text" required placeholder="Ex: Collectif Cycliste" class="w-full bg-secondary-50 border border-secondary-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-700">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-secondary-900 uppercase tracking-wider mb-1">
+                            <span class="lang-fr">Adresse courriel</span>
+                            <span class="lang-en">Email Address</span>
+                        </label>
+                        <input type="email" required placeholder="bâtisseur@habile.ca" class="w-full bg-secondary-50 border border-secondary-100 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary-700">
+                    </div>
+                    <button type="submit" class="w-full inline-flex items-center justify-center px-6 py-3.5 rounded-xl font-bold text-white bg-primary-700 hover:bg-primary-800 transition-all text-sm shadow-sm">
+                        <span class="lang-fr">Rejoindre la liste d'attente</span>
+                        <span class="lang-en">Join the Waitlist</span>
+                    </button>
+                </form>
+
+                <!-- Feedback Message -->
+                <div id="form-feedback" class="hidden p-4 rounded-xl bg-primary-50 border border-primary-100 text-center text-sm font-semibold text-primary-800">
+                    <span class="lang-fr">🎉 Merci pour votre intérêt ! Nous vous contacterons dès le début de la phase de test.</span>
+                    <span class="lang-en">🎉 Thank you! We will reach out as soon as testing phases open.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary-900 text-secondary-100 py-12 border-t border-secondary-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-6">
+                <div>
+                    <span class="text-xl font-extrabold tracking-tight text-white">HABILE.ca</span>
+                    <p class="text-xs text-secondary-100 mt-1">
+                        <span class="lang-fr">Hub d'accompagnement des bâtisseurs d'initiatives locales et engagées</span>
+                        <span class="lang-en">Supporting builders of active and committed local initiatives</span>
+                    </p>
+                </div>
+                <div class="flex gap-4 text-xs font-medium">
+                    <a href="https://cohabitat.cc" target="_blank" class="hover:underline">cohabitat.cc</a>
+                    <span>•</span>
+                    <a href="https://labmtl.ca" target="_blank" class="hover:underline">labmtl.ca</a>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-secondary-800 flex flex-col sm:flex-row justify-between text-[11px] text-secondary-100 gap-4">
+                <span>© 2026 habile.ca. Partagé sous licence Creative Commons (BY-NC-SA).</span>
+                <span class="lang-fr">Propulsé par l'intelligence collective citoyenne.</span>
+                <span class="lang-en">Powered by collective citizen intelligence.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic Script -->
+    <script>
+        // Language state management
+        function toggleLanguage() {
+            const currentLang = document.documentElement.lang;
+            const newLang = currentLang === 'fr' ? 'en' : 'fr';
+            document.documentElement.lang = newLang;
+            calculateSavings(); // Re-trigger calculations to dynamically adjust text if needed
+        }
+
+        // Calculations for interactive simulator
+        function calculateSavings() {
+            const units = parseInt(document.getElementById('input-units').value);
+            const landVal = parseFloat(document.getElementById('input-land').value);
+            const orgType = document.getElementById('input-type').value;
+
+            // Update range labels
+            document.getElementById('units-val').innerText = units;
+            document.getElementById('land-val').innerText = landVal.toFixed(1) + " M$";
+
+            // Multiplier modifiers based on scale and organizer type
+            let modifier = 1.0;
+            if (orgType === 'collective') modifier = 1.3; // Citizen groups save more relative to doing everything custom
+            if (orgType === 'coop') modifier = 1.1;
+            if (orgType === 'developer') modifier = 0.9;
+
+            // Simple realistic model: Traditional pre-dev cost is roughly 4-6% of estimated project value
+            const projectValue = (units * 275000) + (landVal * 1000000); // 275k per unit build cost approximation
+            const traditionalPreDev = projectValue * 0.05; // 5% of project is pre-dev planning and risk money
+            
+            // Habile technology and shared templates cut upfront professional overhead by roughly 35-50%
+            const savings = traditionalPreDev * 0.40 * modifier;
+            
+            // Format to friendly currency
+            let formattedSavings = "";
+            if (savings >= 1000000) {
+                formattedSavings = (savings / 1000000).toFixed(2) + " M$";
+            } else {
+                formattedSavings = Math.round(savings / 1000) * 1000;
+                formattedSavings = formattedSavings.toLocaleString() + " $";
+            }
+
+            // Estimate months saved based on scale
+            let monthsSaved = 8;
+            if (units > 30) monthsSaved = 12;
+            if (units > 60) monthsSaved = 15;
+
+            // Update DOM
+            document.getElementById('saved-capital').innerText = formattedSavings;
+            document.getElementById('saved-time').innerText = monthsSaved + " mois / months";
+        }
+
+        // Contact submission handler
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            document.getElementById('waitlist-form').classList.add('hidden');
+            document.getElementById('form-feedback').classList.remove('hidden');
+        }
+
+        // Initialize view
+        window.onload = function() {
+            calculateSavings();
+        }
+    </script>
+</body>
+</html>
